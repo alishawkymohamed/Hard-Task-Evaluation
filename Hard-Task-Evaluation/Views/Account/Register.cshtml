@@ -1,4 +1,6 @@
-﻿@model Hard_Task_Evaluation.Models.RegisterViewModel
+﻿@using Hard_Task_Evaluation.Utilities
+
+@model Hard_Task_Evaluation.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
@@ -10,23 +12,87 @@
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.BirthDate, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.BirthDate, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.CivilId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.CivilId, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CivilId, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nationality, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.DropDownList("Nationality", new SelectList(NationalitiesHelper.GetNationalities()), "Select Nationality", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Nationality, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(x => x.Gender, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+
         </div>
     </div>
     <div class="form-group">
@@ -37,5 +103,5 @@
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+
 }

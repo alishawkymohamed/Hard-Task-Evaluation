@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Hard_Task_Evaluation.Models
@@ -79,6 +80,33 @@ namespace Hard_Task_Evaluation.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required, MinLength(3), MaxLength(50), Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+
+        [Required, MinLength(3), MaxLength(50), Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+
+        [Required, DataType(DataType.DateTime), Display(Name = "Birth Date")]
+        public DateTime BirthDate { get; set; }
+
+
+        [EnumDataType(typeof(Gender))]
+        public Gender Gender { get; set; }
+
+
+        [Required, MaxLength(100)]
+        public string Nationality { get; set; }
+
+        [Display(Name = "Civil ID")]
+        public int? CivilId { get; set; }
+
+
+        [Required, DataType(DataType.PhoneNumber), MaxLength(50), Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
     }
 
     public class ResetPasswordViewModel

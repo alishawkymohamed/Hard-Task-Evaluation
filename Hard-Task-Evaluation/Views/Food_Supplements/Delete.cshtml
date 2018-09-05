@@ -1,0 +1,103 @@
+﻿@model Hard_Task_Evaluation.Models.Food_Supplements
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Food & Supplements</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Food_SupplementsType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food_SupplementsType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Protien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Protien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Carb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Carb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCalories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCalories)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-warning" })
+    </div>
+    }
+</div>

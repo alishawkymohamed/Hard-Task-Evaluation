@@ -1,0 +1,27 @@
+﻿@using Hard_Task_Evaluation.Utilities;
+@model DateTime?
+
+@{
+    DateTime dt;
+    if (Model.HasValue)
+    {
+        dt = (DateTime)Model;
+    }
+    else
+    {
+        dt = DateTime.Now;
+    }
+}
+
+@Html.TextBoxFor(m => m, new { @class = "form-control DateTimePicker", id = "DateTimePicker", data_provide = "datepicker", data_date = dt })
+@Html.ValidationMessageFor(m => m, null, new { @class = "text-danger" })
+
+@Html.Script(
+    @<script>
+         $(function () {
+             $(".DateTimePicker").datetimepicker({
+                 format: 'MM/DD/YYYY'
+             });
+         })
+    </script>
+                )

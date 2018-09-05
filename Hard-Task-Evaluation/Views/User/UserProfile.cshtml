@@ -1,0 +1,163 @@
+﻿@model Hard_Task_Evaluation.Models.User
+
+@{
+    ViewBag.Title = "User Profile";
+}
+
+<div>
+    <h2 style="display:inline-block;margin-right:40px;"> @Html.DisplayFor(model => model.FullName)</h2>
+
+    <h2 style=" display:inline-block;">
+        @Html.ActionLink("Edit", "EditProfile", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    </h2>
+</div>
+
+<div>
+    <h4>User Info</h4>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CivilId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CivilId)
+        </dd>
+
+    </dl>
+    <hr />
+    <h4>Medical Info</h4>
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.DailyFood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.DailyFood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.ExerciseTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.ExerciseTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.GoalOfDiet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.GoalOfDiet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.LevelOfExercise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.LevelOfExercise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.ProblemHistory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.ProblemHistory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalInfo.Vitamins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalInfo.Vitamins)
+        </dd>
+
+    </dl>
+</div>
+

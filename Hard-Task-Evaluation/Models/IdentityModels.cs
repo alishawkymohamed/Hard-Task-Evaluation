@@ -24,10 +24,19 @@ namespace Hard_Task_Evaluation.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public new DbSet<User> Users { get; set; }
+        public DbSet<MedicalInfo> MedicalInfo { get; set; }
+        public DbSet<Food_Supplements> Food_Supplements { get; set; }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().Property(x => x.PhoneNumber).IsRequired();
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
