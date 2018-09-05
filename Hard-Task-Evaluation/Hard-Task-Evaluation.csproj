@@ -189,51 +189,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201809030034074_init.cs" />
-    <Compile Include="Migrations\201809030034074_init.Designer.cs">
-      <DependentUpon>201809030034074_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809030043538_MedicalInfo.cs" />
-    <Compile Include="Migrations\201809030043538_MedicalInfo.Designer.cs">
-      <DependentUpon>201809030043538_MedicalInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809030103018_FoodSupplements.cs" />
-    <Compile Include="Migrations\201809030103018_FoodSupplements.Designer.cs">
-      <DependentUpon>201809030103018_FoodSupplements.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809030107198_FoodSupplements1.cs" />
-    <Compile Include="Migrations\201809030107198_FoodSupplements1.Designer.cs">
-      <DependentUpon>201809030107198_FoodSupplements1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040129267_aaa.cs" />
-    <Compile Include="Migrations\201809040129267_aaa.Designer.cs">
-      <DependentUpon>201809040129267_aaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040132529_aaaa.cs" />
-    <Compile Include="Migrations\201809040132529_aaaa.Designer.cs">
-      <DependentUpon>201809040132529_aaaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040136479_aaaaa.cs" />
-    <Compile Include="Migrations\201809040136479_aaaaa.Designer.cs">
-      <DependentUpon>201809040136479_aaaaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040212031_aaaaaa.cs" />
-    <Compile Include="Migrations\201809040212031_aaaaaa.Designer.cs">
-      <DependentUpon>201809040212031_aaaaaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040252208_aaaaaan.cs" />
-    <Compile Include="Migrations\201809040252208_aaaaaan.Designer.cs">
-      <DependentUpon>201809040252208_aaaaaan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809040323046_aaaaaanm.cs" />
-    <Compile Include="Migrations\201809040323046_aaaaaanm.Designer.cs">
-      <DependentUpon>201809040323046_aaaaaanm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201809051913376_aaaaaanmm.cs" />
-    <Compile Include="Migrations\201809051913376_aaaaaanmm.Designer.cs">
-      <DependentUpon>201809051913376_aaaaaanmm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Enums\Time.cs" />
     <Compile Include="Models\Food_Supplements.cs" />
@@ -577,41 +532,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809030034074_init.resx">
-      <DependentUpon>201809030034074_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809030043538_MedicalInfo.resx">
-      <DependentUpon>201809030043538_MedicalInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809030103018_FoodSupplements.resx">
-      <DependentUpon>201809030103018_FoodSupplements.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809030107198_FoodSupplements1.resx">
-      <DependentUpon>201809030107198_FoodSupplements1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040129267_aaa.resx">
-      <DependentUpon>201809040129267_aaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040132529_aaaa.resx">
-      <DependentUpon>201809040132529_aaaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040136479_aaaaa.resx">
-      <DependentUpon>201809040136479_aaaaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040212031_aaaaaa.resx">
-      <DependentUpon>201809040212031_aaaaaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040252208_aaaaaan.resx">
-      <DependentUpon>201809040252208_aaaaaan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809040323046_aaaaaanm.resx">
-      <DependentUpon>201809040323046_aaaaaanm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201809051913376_aaaaaanmm.resx">
-      <DependentUpon>201809051913376_aaaaaanmm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
